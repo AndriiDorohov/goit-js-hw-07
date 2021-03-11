@@ -22,9 +22,9 @@ const elements = [];
 
 for (let i = 0; i < ingredients.length; i += 1) {
     const option = ingredients[i];
-    const ListEl = document.createElement('li');
-    ListEl.textContent = option;
-    elements.push(ListEl);
+    const listEl = document.createElement('li');
+    listEl.textContent = option;
+    elements.push(listEl);
 }
 
 ingridientsContainerEl.append(...elements);
