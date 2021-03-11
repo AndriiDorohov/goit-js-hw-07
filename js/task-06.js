@@ -24,22 +24,13 @@
 //   border-color: #f44336;
 // }
 
-let input = document.querySelector('#validation-input');
-
-const onInputBlur = () => {
-    if (input.value.length === Number(input.getAttribute('data-length'))) {
-        var size = document.getElementById('#validation-input').style.border;
-        console.log(input.value.length)
-    } else {
-        console.log(input.value.length)
-}
-    
-}
-// const onInputFocus = () => console.log(input.value.length);
-
-// input.addEventListener('focus', onInputFocus);
-input.addEventListener('blur', onInputBlur);
-
-;
-
-
+document.getElementById("validation-input").onblur = function() {
+  console.log(this.value.length);
+  if (Number(this.getAttribute('data-length')) === this.value.length) { 
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
+  }
+};
