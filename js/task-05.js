@@ -9,5 +9,6 @@ let input = document.querySelector('#name-input');
 
 
 input.oninput = function () {
-    document.getElementById('name-output').innerHTML = input.value;
+    if (input.value === '') { document.getElementById('name-output').innerHTML = 'незнакомец'; }
+    else { document.getElementById('name-output').innerHTML = input.value };
   };
