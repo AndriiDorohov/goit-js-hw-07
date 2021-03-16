@@ -6,9 +6,10 @@
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
 
 let input = document.querySelector('#name-input');
+const nameOutputEl = document.getElementById('name-output');
 
 
 input.oninput = function () {
-    if (input.value === '') { document.getElementById('name-output').innerHTML = 'незнакомец'; }
-    else { document.getElementById('name-output').innerHTML = input.value };
+    if (input.value === '') { nameOutputEl.innerHTML = 'незнакомец'; }
+    else { nameOutputEl.innerHTML = input.value };
   };

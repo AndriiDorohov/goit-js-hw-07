@@ -18,7 +18,7 @@ console.log(`В списке ${menuItemsByClass.length} категории`);
 const navEl = document.querySelector('#categories');
 const navCatEl = navEl.querySelectorAll('.item');
 
-for (let i = 0; i < navCatEl.length; i++) {
-    console.log(`Категория: ${navCatEl[i].firstElementChild.textContent}`);
+navCatEl.forEach(function(item, i, arr) {
+  console.log(`Категория: ${navCatEl[i].firstElementChild.textContent}`);
     console.log(`Количество элементов: ${navCatEl[i].querySelectorAll('li').length}`);
-};
+});

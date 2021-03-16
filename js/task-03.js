@@ -29,6 +29,7 @@ const images = [
   },
 ];
 
-for (let galleryEl of images) document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${galleryEl.url}" alt="${galleryEl.alt}"></li>`);
-
+images.forEach(function(galleryEl, i, arr) {
+    document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${galleryEl.url}" alt="${galleryEl.alt}"></li>`);
+});
 

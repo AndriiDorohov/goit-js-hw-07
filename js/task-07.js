@@ -8,10 +8,10 @@
 
 
 const fontEl = document.querySelector('#font-size-control');
+const textEl = document.querySelector('#text');
 
 fontEl.addEventListener('click', resizeText);
 
 function resizeText() {
-    const i = document.querySelector('#text');
-    i.setAttribute("style", `font-size: ${fontEl.value}px !important;`);
+    textEl.setAttribute("style", `font-size: ${fontEl.value}px !important;`);
 }

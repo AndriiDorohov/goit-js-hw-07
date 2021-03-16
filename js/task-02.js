@@ -20,11 +20,13 @@ const ingridientsContainerEl = document.querySelector('#ingredients')
 
 const elements = [];
 
-for (let i = 0; i < ingredients.length; i += 1) {
+
+ingredients.forEach(function(item, i, arr) {
     const option = ingredients[i];
     const listEl = document.createElement('li');
     listEl.textContent = option;
     elements.push(listEl);
-}
+});
+
 
 ingridientsContainerEl.append(...elements);
