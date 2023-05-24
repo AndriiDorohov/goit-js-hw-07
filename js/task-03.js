@@ -1,14 +1,15 @@
-//Задание 3
-//Напиши скрипт для создания галлереи изображений по массиву данных.
+// Task 3
+// Write a script to create an image gallery based on an array of data.
 
-//В HTML есть список ul#gallery.
+// In HTML, there is an empty <ul> with the id "gallery".
 
-//<ul id="gallery"></ul>
-//Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+// <ul id="gallery"></ul>
 
-//Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-//Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
+// Use the "images" array of objects to create <img> tags nested within <li>.
+// Use template strings and insertAdjacentHTML() to create the markup.
 
+// All gallery elements should be inserted into the DOM in a single insertion operation.
+// Apply minimal styling to the gallery using CSS classes, such as flexbox or grids.
 
 
 const images = [

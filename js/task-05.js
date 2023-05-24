@@ -1,6 +1,7 @@
-// Задание 5
-// Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. 
-// Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
+
+// Task 5
+// Write a script that, when the text is entered into the input field input#name-input (input event),
+// displays its current value in the span#name-output. If the input is empty, the span should display the string 'незнакомец'.
 
 // <input type="text" placeholder="Ваше имя?" id="name-input" />
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>

@@ -1,6 +1,5 @@
-// Задание 7
-// Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и 
-// изменяет инлайн - стиль span#text обновляя свойство font - size.В результате при перетаскивании ползунка будет меняться размер текста.
+// Task 7
+// Write a script that reacts to the change of the input#font-size-control value (input event) and updates the inline style of span#text by changing the font-size property. As a result, dragging the slider will change the text size.
 
 // <input id="font-size-control" type="range" />
 // <br />

@@ -1,16 +1,17 @@
-// Задание 1
-// В HTML есть список категорий ul#categories.
-// Напиши скрипт, который выполнит следующие операции.
+// Task 1
+// There is a list of categories in HTML with the ul#categories selector.
+// Write a script that performs the following operations.
 
-// 1.Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'.
+// 1. Counts and outputs the number of categories in the ul#categories, i.e., the number of li.item elements.
+// The output should be 'There are 3 categories in the list.'
 
-// 2.Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль текст заголовка элемента (тега h2) и количество 
-// элементов в категории(всех вложенных в него элементов li).
+// 2. For each li.item element in the ul#categories list, finds and outputs the text of the element's heading (h2 tag) and the number
+// of elements in the category (all nested li elements).
 
-// Например для первой категории получится:
+// For example, for the first category, the output should be:
 
-// Категория: Животные
-// Количество элементов: 4
+// Category: Animals
+// Number of elements: 4
 
 const menuItemsByClass = document.querySelectorAll(".item");
 console.log(`В списке ${menuItemsByClass.length} категории`);

@@ -1,22 +1,58 @@
-// Задание 8 - дополнительное, выполнять не обязательно
-// Напиши скрипт создания и очистки коллекции элементов. 
-// Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция.
-// При нажатии на кнопку Очистить, коллекция элементов очищается.
+// Task 8 (optional, not required to complete)
+// Write a script for creating and clearing a collection of elements.
+// The user enters the number of elements in the input and clicks the Create button, after which the collection is rendered.
+// When the Clear button is clicked, the collection of elements is cleared.
 
-// Создай функцию createBoxes(amount), которая принимает 1 параметр amount - число.Функция создает столько div,
-// сколько указано в amount и добавляет их в div#boxes.
+// Create a function createBoxes(amount) that takes 1 parameter amount, which is a number. The function creates div elements equal to the specified amount and adds them to the div#boxes.
 
-// Каждый созданный div:
+// Each created div should have:
+// - A random background color in RGB format.
+// - The size of the first div should be 30px by 30px.
+// - Each subsequent div should be 10px wider and taller than the previous one.
 
-// Имеет случайный rgb цвет фона
-// Размеры самого первого div - 30px на 30px
-// Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
-// Создай функцию destroyBoxes(), которая очищает div#boxes.
+// Create a function destroyBoxes() that clears the div#boxes.
 
 // <div id="controls">
-  // <input type="number" min="0" max="100" step="1" />
-  // <button type="button" data-action="render">Создать</button>
-  // <button type="button" data-action="destroy">Очистить</button>
+// <input type="number" min="0" max="100" step="1" />
+// <button type="button" data-action="render">Создать</button>
+// <button type="button" data-action="destroy">Очистить</button>
 // </div>
 
 // <div id="boxes"></div>
+
+const input = document.querySelector('#controls input');
+const renderBtn = document.querySelector('[data-action="render"]');
+const destroyBtn = document.querySelector('[data-action="destroy"]');
+const boxesContainer = document.querySelector('#boxes');
+
+renderBtn.addEventListener('click', () => createBoxes(input.value));
+destroyBtn.addEventListener('click', destroyBoxes);
+
+function createBoxes(amount) {
+  destroyBoxes(); // Очищаємо попередню колекцію перед створенням нової
+
+  const boxes = [];
+  let size = 30;
+
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.style.backgroundColor = getRandomColor();
+    box.style.width = `${size}px`;
+    box.style.height = `${size}px`;
+    boxes.push(box);
+    size += 10;
+  }
+
+  boxesContainer.append(...boxes);
+}
+
+function destroyBoxes() {
+  boxesContainer.innerHTML = '';
+}
+
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}

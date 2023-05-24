@@ -1,8 +1,8 @@
-// Задание 2
-// В HTML есть пустой список ul#ingredients.
+// Task 2
+// In the HTML, there is an empty list with the id "ingredients".
 
 // <ul id="ingredients"></ul>
-// В JS есть массив строк.
+// In JavaScript, there is an array of strings.
 
 const ingredients = [
   'Картошка',
@@ -12,9 +12,10 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-// Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, 
-// после чего вставит все li за одну операцию в список ul.ingredients.
-// Для создания DOM - узлов используй document.createElement().
+// Task 2
+// Write a script that will create a separate <li> element for each item in the "ingredients" array,
+// and then insert all <li> elements at once into the <ul> list with the class "ingredients".
+// Use document.createElement() to create DOM nodes.
 
 const ingridientsContainerEl = document.querySelector('#ingredients')
 
