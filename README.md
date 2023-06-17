@@ -1,46 +1,44 @@
-**Читать на других языках: [Русский](README.md), [Українська](README.ua.md).**
+# Admission criteria
 
-# Критерии приема
+- The repository `goit-js-hw-07` has been created
+- When submitting homework, there are two links: to the source files and the work
+page on GitHub pages
+- The task was completed strictly according to the TOR
+- Each task is executed in a separate file named `task-task_number.js`.
+  Use `<script type="module">` to close the task code in a separate
+scope and avoid identifier name conflicts
+- When visiting the work page (GitHub pages) of the task, there are no errors and
+warnings in the console
+- The names of variables and functions are clear, descriptive
+- The code is formatted with Prettier
 
-- Создан репозиторий `goit-js-hw-07`
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на GitHub pages
-- Задание выполнено строго по ТЗ
-- Каждое задание выполнено в отдельном файле с именем `task-номер_задания.js`.
-  Используй `<script type="module">` чтобы закрыть код задания в отдельной
-  области видимости и избежать конфликтов имен идентификаторов
-- При посещении рабочей страницы (GitHub pages) задания, в консоли нету ошибок и
-  предупреждений
-- Имена переменных и функций понятные, описательные
-- Код отформатирован с помощью Prettier
+## Task 1
 
-## Задание 1
-
-В HTML есть список категорий `ul#categories`.
+The HTML has a list of categories `ul#categories'.
 
 ```html
 <ul id="categories">
   <li class="item">
-    <h2>Животные</h2>
+    <h2>Animals</h2>
 
     <ul>
-      <li>Кот</li>
-      <li>Хомяк</li>
-      <li>Лошадь</li>
-      <li>Попугай</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Продукты</h2>
+      <li>Cat</li>
+      <li>Hamster</li>
+      <li>Horse</li>
+      <li>Parrot</li>
+</ul>
+</li>
+<li class="item">
+    <h2>Products</h2>
 
     <ul>
-      <li>Хлеб</li>
-      <li>Петрушка</li>
-      <li>Творог</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Технологии</h2>
+      <li>Bread</li>
+      <li>Parsley</li>
+      <li>Cottage cheese</li>
+</ul>
+</li>
+<li class="item">
+    <h2>Technologies</h2>
 
     <ul>
       <li>HTML</li>
@@ -53,61 +51,61 @@
 </ul>
 ```
 
-Напиши скрипт, который выполнит следующие операции.
+Write a script that will perform the following operations.
 
-Посчитает и выведет в консоль количество категорий в `ul#categories`, то есть
-элементов `li.item`. Получится `'В списке 3 категории.'`.
+Counts and outputs to the console the number of categories in `ul#categories`, that is
+, the elements `li.item'. It will turn out `There are 3 categories in the list.".
 
-Для каждого элемента `li.item` в списке `ul#categories`, найдет и выведет в
-консоль текст заголовка элемента (тега h2) и количество элементов в категории
-(всех вложенных в него элементов `li`).
+For each element `li.item` in the list `ul#categories`, it will find and output to the
+console the text of the element title (h2 tag) and the number of elements in the category
+(all nested elements `li`).
 
-Например для первой категории получится:
+For example, for the first category it will turn out:
 
-- Категория: Животные
-- Количество элементов: 4
+- Category: Animals
+- Number of elements: 4
 
-## Задание 2
+## Task 2
 
-В HTML есть пустой список `ul#ingredients`.
+The HTML has an empty list of `ul#ingredients'.
 
 ```html
 <ul id="ingredients"></ul>
 ```
 
-В JS есть массив строк.
+There is an array of strings in JS.
 
 ```js
 const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
+  'Potatoes',
+  'Mushrooms',
+  'Garlic',
+  'Tomatoes',
+  'Greenery',
+  'Seasonings',
 ];
-```
+``
 
-Напиши скрипт, который для каждого элемента массива `ingredients` создаст
-отдельный `li`, после чего вставит все `li` за одну операцию в список
-`ul.ingredients`. Для создания DOM-узлов используй `document.createElement()`.
+Write a script that will create a separate `li` for each element of the `ingredients` array
+, after which it will insert all the `li` in one operation into the list
+`ul.ingredients`. To create DOM nodes, use `document.createElement()'.
 
-## Задание 3
+## Task 3
 
-Напиши скрипт для создания галлереи изображений по массиву данных.
+Write a script to create a gallery of images based on an array of data.
 
-В HTML есть список `ul#gallery`.
+The HTML has a list of 'ul#gallery'.
 
 ```html
 <ul id="gallery"></ul>
 ```
 
-Используй массив объектов `images` для создания тегов `img` вложенных в `li`.
-Для создания разметки используй шаблонные строки и `insertAdjacentHTML()`.
+Use an array of `images` objects to create `img` tags nested in `li'.
+To create markup, use template strings and `insertAdjacentHTML()'.
 
-- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через
-  css-классы.
+- All gallery elements must be added to the DOM in one insertion operation.
+- Add minimal gallery design with flexboxes or grids via
+  css classes.
 
 ```js
 const images = [
@@ -129,16 +127,16 @@ const images = [
 ];
 ```
 
-## Задание 4
+## Task 4
 
-Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать
-значение счетчика на `1`.
+The counter consists of a span and buttons that should increase and decrease
+the counter value by `1`.
 
-- Создай переменную `counterValue` в которой будет хранится текущее значение
-  счетчика.
-- Создай функции `increment` и `decrement` для увеличения и уменьшения значения
-  счетчика
-- Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
+- Create a variable `counterValue` in which the current value
+of the counter will be stored.
+- Create the `increment` and `decrement` functions to increase and decrease the value
+  counter
+- Add listeners to button clicks, function calls and interface updates
 
 ```html
 <div id="counter">
@@ -148,37 +146,37 @@ const images = [
 </div>
 ```
 
-## Задание 5
+## Task 5
 
-Напиши скрипт который, при наборе текста в инпуте `input#name-input` (событие
-input), подставляет его текущее значение в `span#name-output`. Если инпут
-пустой, в спане должна отображаться строка `'незнакомец'`.
+Write a script that, when typing in the input `input#name-input` (
+input event), substitutes its current value in `span#name-output'. If the input
+is empty, the string `stranger" should be displayed in the span.
 
 ```html
-<input type="text" placeholder="Ваше имя?" id="name-input" />
-<h1>Привет, <span id="name-output">незнакомец</span>!</h1>
-```
+<input type="text" placeholder="Your name?" id="name-input" />
+<h1>Hello, <span id="name-output">stranger</span>!</h1>
+``
 
-## Задание 6
+## Task 6
 
-Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое
-на правильное количество символов.
+Write a script that, if you lose focus on the input, checks its contents
+for the correct number of characters.
 
 ```html
 <input
   type="text"
   id="validation-input"
   data-length="6"
-  placeholder="Введи 6 символов"
+  placeholder="Enter 6 characters"
 />
-```
+``
 
-- Сколько символов должно быть в инпуте, указывается в его атрибуте
+- How many characters should be in the input, specified in its attribute
   `data-length`.
-- Если введено подходящее количество, то `border` инпута становится зеленым,
-  если неправильное - красным.
+- If a suitable quantity is entered, then the `border` of the input turns green,
+if the wrong one is red.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`.
+To add styles, use CSS classes `valid` and `invalid'.
 
 ```css
 #validation-input {
@@ -194,44 +192,44 @@ input), подставляет его текущее значение в `span#n
 }
 ```
 
-## Задание 7
+## Task 7
 
-Напиши скрипт, который реагирует на изменение значения `input#font-size-control`
-(событие input) и изменяет инлайн-стиль `span#text` обновляя свойство
-`font-size`. В результате при перетаскивании ползунка будет меняться размер
-текста.
+Write a script that responds to changing the value of `input#font-size-control`
+(input event) and changes the inline style of `span#text` by updating the property
+`font-size`. As a result, when dragging the slider, the text size will change
+.
 
 ```html
 <input id="font-size-control" type="range" />
 <br />
-<span id="text">Абракадабра!</span>
+<span id="text">Abracadabra!</span>
 ```
 
-## Задание 8 - дополнительное, выполнять не обязательно
+## Task 8 is optional, it is not necessary to perform
 
-Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит
-количество элементов в `input` и нажимает кнопку `Создать`, после чего
-рендерится коллекция. При нажатии на кнопку `Очистить`, коллекция элементов
-очищается.
+Write a script for creating and cleaning a collection of items. The user enters
+the number of elements in the `input` and clicks the `Create` button, after which
+the collection is rendered. When you click on the `Clear` button, the collection of items
+is cleared.
 
-Создай функцию `createBoxes(amount)`, которая принимает 1 параметр `amount` -
-число. Функция создает столько `div`, сколько указано в `amount` и добавляет их
-в `div#boxes`.
+Create a function `createBoxes(amount)', which takes 1 parameter `amount' -
+a number. The function creates as many `div` as specified in `amount` and adds them
+to `div#boxes'.
 
-Каждый созданный div:
+Each created div:
 
-- Имеет случайный rgb цвет фона
-- Размеры самого первого div - 30px на 30px
-- Каждый следующий div после первого, должен быть шире и выше предыдущего на
-  10px
+- Has a random rgb background color
+- The dimensions of the very first div are 30px by 30px
+- Each subsequent div after the first one should be wider and higher than the previous one by
+10px
 
-Создай функцию `destroyBoxes()`, которая очищает `div#boxes`.
+Create a function `destroyBoxes()` that clears `div#boxes'.
 
 ```html
 <div id="controls">
   <input type="number" min="0" max="100" step="1" />
-  <button type="button" data-action="render">Создать</button>
-  <button type="button" data-action="destroy">Очистить</button>
+  <button type="button" data-action="render">Create</button>
+  <button type="button" data-action="destroy">Clear</button>
 </div>
 
 <div id="boxes"></div>
